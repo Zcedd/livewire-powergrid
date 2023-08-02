@@ -261,7 +261,7 @@ class ProcessDataSource
     /**
      * @throws \Exception
      */
-    protected function resolveCollection(array|BaseCollection|EloquentBuilder|QueryBuilder|null $datasource = null): BaseCollection
+    public function resolveCollection(array|BaseCollection|EloquentBuilder|QueryBuilder|null $datasource = null): BaseCollection
     {
         if (!boolval(config('livewire-powergrid.cached_data', false))) {
             return new BaseCollection($this->component->datasource());
